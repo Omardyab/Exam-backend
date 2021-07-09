@@ -9,7 +9,7 @@ app.use(express.json());
 // copy .env 
 const PORT=process.env.PORT;
 const mongoose = require('mongoose');
-mongoose.connect(`${process.env.MONGO_URL}`,{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(`${process.env.MONGO_URL}`, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //schema 
 const CocktailSchema = new mongoose.Schema({
@@ -53,7 +53,7 @@ function addFavdatahandler(req,res){
   const item=new CocktailModel({
       name:name,
       img:img,
-      id:id,
+    //   id:id,
   });
   item.save(); 
 
